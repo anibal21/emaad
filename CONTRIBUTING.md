@@ -17,23 +17,25 @@ Thank you for improving a method that others will run as law in design conversat
 - Examples with hardcoded secrets or "disable audit" advice
 - Expanding scope into a full application without an accepted spec change
 - Vague multi-agent recommendations without constraints
+- Appending new requirements into a **frozen/converged** spec folder
 
 ## Process (SDD)
 
 1. Read `constitution.md` — amendments need the Article X process  
 2. Prefer **Option 3 (Hola Ema)** or explicit PRs for designer changes; trunk = `main` (`method/ema-trunk.md`)  
-3. For method changes: update `specs/001-architecture-designer/` if requirements shift  
-4. Keep `method/`, `templates/`, `checklists/`, and `skills/emaad-designer` consistent  
-5. Add or update an example when behavior changes  
-6. Open a PR with: problem, change, how an agent session behaves differently — or commit to `main` for small trunk changes when maintainers agree  
+3. **Create `specs/00N-short-slug/`** for the change (see [`specs/README.md`](./specs/README.md)). Never extend frozen `001`.  
+4. Implement in `method/`, `templates/`, `checklists/`, `skills/emaad-designer`  
+5. Mark the spec Converged; update the specs index  
+6. Add or update an example when behavior changes  
+7. Commit to `main` (or short-lived PR) with a clear message; push when asked  
 
-Client design work belongs under `projects/` (boot Options 1–2), not as drive-by edits to the method.
+Client design work belongs under `projects/` (boot Options 1–2; gitignored)—not as drive-by edits to the method.
 
 ## Style
 
 - Short, imperative method docs  
 - Tables over prose when classifying  
-- Cite upstream sources with links (OWASP, LangChain, Anthropic, Spec Kit)  
+- Cite upstream sources with links (OWASP, LangChain, Anthropic, Spec Kit, Google Cloud)  
 - Spanish or English prose is fine in discussions; prefer English for core method headings for portability  
 
 ## License

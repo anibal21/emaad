@@ -2,7 +2,8 @@
 
 **Branch**: `001-architecture-designer`  
 **Date**: 2026-09-06  
-**Spec**: [spec.md](./spec.md)
+**Spec**: [spec.md](./spec.md)  
+**Status**: Foundation frozen — further plans live under `specs/002+`
 
 ## Summary
 

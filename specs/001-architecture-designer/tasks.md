@@ -1,6 +1,8 @@
 # Tasks: 001-architecture-designer
 
-**Goal**: Materialize the EMAAD method so an agent can run a full design session from the skill entry point.
+**Goal**: Materialize the EMAAD method baseline so an agent can run a full design session from the skill entry point.
+
+**Status**: Foundation frozen. Follow-ups live in `002`–`005` (see `specs/README.md`).
 
 ## Phase A — Foundation
 
@@ -40,28 +42,9 @@
 - [X] T019 Create optional `agents/` definitions
 - [X] T020 Create `examples/software-dev-team/` sample blueprint
 - [X] T021 Create `CONTRIBUTING.md`
-- [X] T022 Mark this tasks file complete and converge against spec acceptance criteria
+- [X] T022 Mark foundation complete
 
 ## Converge notes
 
-Spec FR-001–FR-021 covered by constitution, boot menu, projects index, GCP patterns, primitive selection, phases, harness, templates, skill, ema-trunk.  
-SC-001–SC-005 validated by method completeness + example package inspectability.  
-Status: **Converged** for P1 method scope including boot modes (2026-09-06).
-
-### Follow-up (v1.1)
-
-- [X] T023 Boot menu options 1/2/3
-- [X] T024 `projects/` + `index.json`
-- [X] T025 Trunk-based Option 3 (`ema-trunk.md`)
-- [X] T026 Migrate paths from `sessions/` to `projects/`
-
-### Follow-up (v1.2)
-
-- [X] T027 GCP agentic patterns guide + mapping
-- [X] T028 Primitive selection (scripts/skills/agents)
-- [X] T029 Wire phases 02–06 + templates + FR-019–021
-
-### Follow-up (v1.3)
-
-- [X] T030 One-question-at-a-time + k/N (`questioning.md`)
-- [X] T031 Gitignore user `projects/*/` and live `index.json`; ship `index.example.json`
+Foundation **Converged** then **Frozen** (2026-09-06).  
+Post-foundation work: [002](../002-boot-menu-projects/), [003](../003-gcp-primitive-selection/), [004](../004-one-question-gitignore/), [005](../005-sdd-spec-numbering/).

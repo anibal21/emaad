@@ -1,9 +1,11 @@
-# Feature Specification: EMAAD Designer
+# Feature Specification: EMAAD Designer (Foundation)
 
 **Feature Branch**: `001-architecture-designer`  
 **Created**: 2026-09-06  
-**Status**: Active  
+**Status**: **Foundation (frozen)** — do not append new requirements here; open `specs/00N-…` (see [specs/README.md](../README.md))  
 **Input**: Enterprise Multi-Agent Architecture Designer — conversation-executed specification for designing agent ecosystems (software development or any domain) with security harness, SRP, token optimization, and optimal HITL.
+
+This folder is the **0→1 baseline** of Ema/EMAAD. Incremental product changes after foundation are specified in `002+` (boot menu, GCP primitives, questioning cadence, SDD numbering, …).
 
 ---
 

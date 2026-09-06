@@ -99,6 +99,7 @@ Follow `method/questioning.md` strictly (never multi-question blocks).
 
 - Boot: `method/boot-menu.md`
 - Questioning: `method/questioning.md`
+- Specs index: `specs/README.md` (open next `00N` for Ema product changes)
 - Pattern choice: `method/architecture-decision.md`
 - GCP patterns: `method/gcp-agentic-patterns.md`
 - Scripts/skills/agents: `method/primitive-selection.md`

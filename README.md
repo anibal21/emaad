@@ -74,19 +74,19 @@ Optional: copy `skills/emaad-designer` into your personal or project skills fold
 
 ```text
 constitution.md          # Binding principles (read first)
-specs/001-.../           # Product spec, plan, research, tasks (SDD)
-method/                  # Executable conversation method
-  boot-menu.md           # Hola Ema → options 1/2/3
-  ema-trunk.md           # Option 3: trunk-based Ema improvements
-  phases/                # Interview phases 00–09 (project modes)
-  harness/               # Security harness (MCP, skills, agents)
-projects/                # Client design packages + index.json
+specs/                   # Numbered SDD features (see specs/README.md)
+  001-…/                 # Foundation (frozen)
+  002-…/ 003-…/ …        # Incremental product specs
+method/                  # Executable conversation method (implements specs)
+projects/                # User design packages (gitignored) + index.example.json
 templates/               # Deliverable templates
 checklists/              # SRP, security, tokens, HITL
 skills/emaad-designer/   # Skill that drives Ema
 agents/                  # Optional specialist roles
 examples/                # Worked blueprints
 ```
+
+Product change process: open next `specs/00N-…` → implement method/skill → converge → commit (`method/ema-trunk.md`).
 
 ---
 
