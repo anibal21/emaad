@@ -13,7 +13,7 @@ Delivery to trunk: **short-lived branch + Pull Request → `main`** (see `method
 | 003 | [003-gcp-primitive-selection](./003-gcp-primitive-selection/) | Converged | GCP agentic patterns + Script→Skill→Agent selection |
 | 004 | [004-one-question-gitignore](./004-one-question-gitignore/) | Converged | One question per turn (`k/N`); gitignore user projects |
 | 005 | [005-sdd-spec-numbering](./005-sdd-spec-numbering/) | Converged | Formalize multi-spec discipline + backfill 002–004 |
-| 006 | [006-pr-workflow-ema-trunk](./006-pr-workflow-ema-trunk/) | **Active (PR)** | Branch + PR gate for Ema updates; no direct main by default |
+| 006 | [006-pr-workflow-ema-trunk](./006-pr-workflow-ema-trunk/) | Converged | Branch + PR gate for Ema updates; no direct main by default |
 
 Next change → **`007-<short-slug>/`** on a new branch from merged `main`, with PR.
 
@@ -30,4 +30,4 @@ Next change → **`007-<short-slug>/`** on a new branch from merged `main`, with
 | Spec | Notes |
 |------|--------|
 | 001–005 | Early direct-to-`main` history (pre-PR gate) |
-| 006 | First change required to ship via Pull Request |
+| 006 | PR #1 merged (`d0ca2f2`); converge stamp follow-up |
