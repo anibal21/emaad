@@ -86,7 +86,7 @@ agents/                  # Optional specialist roles
 examples/                # Worked blueprints
 ```
 
-Product change process: open next `specs/00N-…` → implement method/skill → converge → commit (`method/ema-trunk.md`).
+Product change process: open next `specs/00N-…` on branch `00N-…` → implement → **Pull Request to `main`** → after approve/merge, start the next feature from updated `main` (`method/ema-trunk.md`).
 
 ---
 
