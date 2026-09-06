@@ -2,8 +2,8 @@
 
 **Feature**: `006-pr-workflow-ema-trunk`  
 **Created**: 2026-09-06  
-**Status**: Active  
-**Branch**: `006-pr-workflow-ema-trunk`  
+**Status**: Converged  
+**Merged**: PR https://github.com/anibal21/emaad/pull/1 (`d0ca2f2`)  
 **Depends on**: `005-sdd-spec-numbering`
 
 ## Summary
@@ -34,10 +34,10 @@ This is trunk-based development with **PR gates**: `main` stays the trunk; branc
 
 ## Acceptance
 
-- [ ] `ema-trunk.md` describes branch → PR → approve → merge → next from main  
-- [ ] CONTRIBUTING / specs README / skill aligned  
-- [ ] `.github/PULL_REQUEST_TEMPLATE.md` present  
-- [ ] This change itself delivered as a PR (not a direct main commit)
+- [x] `ema-trunk.md` describes branch → PR → approve → merge → next from main  
+- [x] CONTRIBUTING / specs README / skill aligned  
+- [x] `.github/PULL_REQUEST_TEMPLATE.md` present  
+- [x] This change itself delivered as a PR (not a direct main commit)
 
 ## Clarifications
 

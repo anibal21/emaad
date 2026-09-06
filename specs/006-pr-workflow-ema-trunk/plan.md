@@ -13,6 +13,6 @@ Update Option 3 trunk docs to mandate short-lived branches + GitHub PRs. Ship th
 
 ## Test plan
 
-- [ ] PR exists against `main` with template sections filled  
-- [ ] Docs state “wait for merge before next feature”  
-- [ ] After approval/merge, next work starts from updated `main`
+- [x] PR exists against `main` with template sections filled  
+- [x] Docs state “wait for merge before next feature”  
+- [x] After approval/merge, next work starts from updated `main`
