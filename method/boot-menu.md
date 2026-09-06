@@ -54,7 +54,7 @@ Wait for a clear choice (number or paraphrase). Do not invent a fourth default p
 }
 ```
 
-If `projects/index.json` is missing, create it from the schema in `projects/README.md`.
+If `projects/index.json` is missing, create it by copying `projects/index.example.json`.
 
 ---
 

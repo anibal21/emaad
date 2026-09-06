@@ -11,6 +11,10 @@ sessions/
 *.session.md
 .emaad-cache/
 
+# User design packages (local workspace — not part of EMAAD product)
+projects/*/
+projects/index.json
+
 # Secrets — never commit
 .env
 .env.*

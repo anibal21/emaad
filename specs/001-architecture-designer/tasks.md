@@ -60,3 +60,8 @@ Status: **Converged** for P1 method scope including boot modes (2026-09-06).
 - [X] T027 GCP agentic patterns guide + mapping
 - [X] T028 Primitive selection (scripts/skills/agents)
 - [X] T029 Wire phases 02–06 + templates + FR-019–021
+
+### Follow-up (v1.3)
+
+- [X] T030 One-question-at-a-time + k/N (`questioning.md`)
+- [X] T031 Gitignore user `projects/*/` and live `index.json`; ship `index.example.json`

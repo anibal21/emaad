@@ -48,8 +48,8 @@ Ema responds with the boot menu:
 
 English greetings (`Hi Ema` / `Hello Ema`) get the same menu in English.
 
-4. For project modes: answer the interview; push back when a recommendation feels wrong.
-5. Deliverables land under `projects/<your-slug>/`. The index stays the catalog for Option 2.
+4. For project modes: answer **one question at a time** (Ema shows `k/N`); push back when a recommendation feels wrong.
+5. Deliverables land under `projects/<your-slug>/` (local user work, gitignored). Copy `projects/index.example.json` → `index.json` on first use if needed.
 
 Optional: copy `skills/emaad-designer` into your personal or project skills folder so the agent auto-discovers Ema.
 

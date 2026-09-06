@@ -120,6 +120,8 @@ A platform owner wants fewer interrupts but no silent high-risk actions.
 ### Non-Functional / Method Quality
 
 - **NFR-001**: Questions MUST map to a decision; no questionnaire padding.
+- **NFR-005**: Designer MUST ask exactly one question per turn, announce total **N** at the start of each phase/set, and show **k/N** progress on every question (`method/questioning.md`).
+- **NFR-006**: User project packages under `projects/<slug>/` and live `projects/index.json` MUST be gitignored; the product repo ships `projects/index.example.json` + `projects/README.md` only.
 - **NFR-002**: Token guidance MUST prefer progressive disclosure and isolation where domains are large.
 - **NFR-003**: Artifacts MUST be Markdown-portable across major coding agents.
 - **NFR-004**: Examples MUST not demonstrate insecure defaults (hardcoded secrets, unscoped MCP, hidden actions).

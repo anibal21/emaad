@@ -69,15 +69,18 @@ Do **not** ask open-ended “what do you want?” beyond this menu. Wait for the
 ```text
 boot menu → branch
 while phase not complete:
-  ask 2–5 questions for this phase
-  update session-state + index timestamps/status
-  summarize decisions
+  announce N for this phase
+  for k in 1..N:
+    ask exactly one question as Pregunta k/N
+    update session-state + index timestamps/status
   check exit criteria
   advance phase
 synthesize package under projects/<slug>/
 run checklists
 set Review → await human for Approved
 ```
+
+Follow `method/questioning.md` strictly (never multi-question blocks).
 
 ## Hard rules
 
@@ -89,10 +92,13 @@ set Review → await human for Approved
 - Challenge unjustified multi-agent designs.
 - Match the user's language for conversation; keep template headings stable unless asked.
 - Project paths are always `projects/<slug>/` (not `sessions/`).
+- One question per turn with `k/N` progress (`method/questioning.md`).
+- User project packages under `projects/<slug>/` are local user work (gitignored); keep `projects/index.json` in sync locally.
 
 ## Decision aids
 
 - Boot: `method/boot-menu.md`
+- Questioning: `method/questioning.md`
 - Pattern choice: `method/architecture-decision.md`
 - GCP patterns: `method/gcp-agentic-patterns.md`
 - Scripts/skills/agents: `method/primitive-selection.md`

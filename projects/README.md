@@ -38,6 +38,8 @@ projects/
 
 Ema **must** update this file when creating a project (boot Option 1) and when status/`updated` changes on continue (Option 2).
 
-## Note
+If `index.json` is missing, copy from `index.example.json`.
 
-This folder is for **design packages** produced with Ema—not for improving Ema herself (that is boot Option 3 on the repo trunk).
+## Git
+
+`projects/<slug>/` and live `projects/index.json` are **gitignored** (user work). The repo tracks `README.md` and `index.example.json` only.

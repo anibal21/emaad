@@ -28,17 +28,20 @@ Equivalents: `Hi Ema`, `Hello Ema`, or any clear address to Ema.
 
 ## Questioning rules
 
-1. **One decision cluster per turn** — ask 2–5 tightly related questions, not a wall of 20.
-2. Every question MUST map to a field in session state or a checklist item (project modes).
-3. Prefer **structured choices** when classifying (pattern, risk tier, HITL class).
-4. **Never re-ask** a confirmed fact; update state instead.
-5. If the user is vague, offer 2–3 concrete interpretations and ask them to pick.
-6. Challenge multi-agent requests that lack binding constraints (constitution Article II).
+Follow [`questioning.md`](./questioning.md) strictly:
+
+1. **One question per turn** — never a multi-question block.
+2. At the start of each phase/set: announce **N** total questions; every turn shows **k/N**.
+3. Every question MUST map to a field in session state or a checklist item (project modes).
+4. Prefer **structured choices** when classifying (pattern, risk tier, HITL class).
+5. **Never re-ask** a confirmed fact; update state instead.
+6. If the user is vague, offer 2–3 concrete interpretations **inside that single question**.
+7. Challenge multi-agent requests that lack binding constraints (constitution Article II).
 
 ## Phase control (Options 1–2)
 
 - Advance only when the phase exit criteria in `phases/*.md` are met OR the user explicitly defers with a recorded gap.
-- Allow **fast-path**: if the user pastes a rich brief, extract answers, confirm, and skip redundant questions.
+- Allow **fast-path**: if the user pastes a rich brief, extract answers, confirm once, skip covered questions, continue one-at-a-time for the rest.
 - On brownfield intake, spend extra time in inventory and gap analysis before pattern selection.
 - Persist under `projects/<slug>/` and keep `projects/index.json` in sync.
 
