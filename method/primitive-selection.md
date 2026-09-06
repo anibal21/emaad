@@ -22,7 +22,7 @@ From the domain map, list units as rows:
 | unit_id | description | judgment? | repeatable procedure? | deterministic check/transform? | needs isolation/parallel/ownership? | external system? |
 |---------|-------------|-----------|----------------------|--------------------------------|-------------------------------------|------------------|
 
-Ask the human **one ambiguous row at a time** (with `k/N` for that mini-set) only for rows that need clarification.
+Ask the human **one item at a time** (item-wise set: `ítem i/M`, with **inline gloss** when using work-type or primitive jargon) only for rows that need clarification—never a full mapping table as the default.
 
 ## Step 2 — Classify each unit
 
