@@ -94,8 +94,10 @@ set Review → await human for Approved
 
 - Boot: `method/boot-menu.md`
 - Pattern choice: `method/architecture-decision.md`
+- GCP patterns: `method/gcp-agentic-patterns.md`
+- Scripts/skills/agents: `method/primitive-selection.md`
 - Matrix snapshot: `skills/emaad-designer/references/decision-matrix.md`
-- Primitives: `method/primitive-taxonomy.md`
+- Primitives taxonomy: `method/primitive-taxonomy.md`
 - Security: `method/harness/*`
 - Ema trunk: `method/ema-trunk.md`
 

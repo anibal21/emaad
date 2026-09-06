@@ -44,7 +44,7 @@
 
 ## Converge notes
 
-Spec FR-001–FR-018 covered by constitution, boot menu, projects index, phases, harness, templates, skill, ema-trunk.  
+Spec FR-001–FR-021 covered by constitution, boot menu, projects index, GCP patterns, primitive selection, phases, harness, templates, skill, ema-trunk.  
 SC-001–SC-005 validated by method completeness + example package inspectability.  
 Status: **Converged** for P1 method scope including boot modes (2026-09-06).
 
@@ -54,3 +54,9 @@ Status: **Converged** for P1 method scope including boot modes (2026-09-06).
 - [X] T024 `projects/` + `index.json`
 - [X] T025 Trunk-based Option 3 (`ema-trunk.md`)
 - [X] T026 Migrate paths from `sessions/` to `projects/`
+
+### Follow-up (v1.2)
+
+- [X] T027 GCP agentic patterns guide + mapping
+- [X] T028 Primitive selection (scripts/skills/agents)
+- [X] T029 Wire phases 02–06 + templates + FR-019–021

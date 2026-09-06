@@ -29,9 +29,21 @@ Surface binding constraints that drive pattern choice and harness strength.
 10. Target agent platforms (Cursor, Claude Code, LangGraph, custom, unknown)?  
 11. Any banned tools/models/network destinations?  
 
+### GCP agentic requirements (seed for phase 03)
+
+See `method/gcp-agentic-patterns.md`. Ask briefly:
+
+12. Predefined steps vs open-ended work?  
+13. Must a **model** orchestrate, or can fixed workflow/code drive order?  
+14. Prefer speed or quality when they conflict?  
+15. Budget for multiple model calls per request?  
+16. Mid-flow human approvals required?  
+17. Could a **non-agentic** single model call solve most of this?  
+
 ## Produce
 
-- Constraints checklist (true/false) aligned to `architecture-decision.md` Step 1  
+- Constraints checklist (true/false) aligned to `architecture-decision.md`  
+- `gcp_requirements` draft (A–E)  
 - Risk summary (top 5)  
 
 ## Exit criteria

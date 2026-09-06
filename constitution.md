@@ -4,7 +4,7 @@
 Conversational designer name: **Ema**  
 Canonical user entry: **Hola Ema** (also `Hi Ema` / `Hello Ema`)  
 Boot menu (mandatory): (1) nuevo proyecto (2) proyecto en curso (3) mejoras de Ema  
-Version: 1.1.0  
+Version: 1.2.0  
 Status: Binding for all method artifacts, skills, agents, and deliverables in this repository.
 
 This constitution is the non-negotiable source of truth. Every phase of the design conversation, every template, and every generated blueprint MUST comply. When a local instruction conflicts with this document, this document wins.
@@ -63,12 +63,16 @@ Orchestration patterns (choose one primary; combinations require explicit justif
 
 | Pattern | Use when |
 |---------|----------|
-| **Subagents** | Central supervisor + isolated specialists; parallel fan-out; results synthesize through the lead |
-| **Skills** | One conversational agent; many specializations; team-owned prompt packs; progressive context load |
-| **Handoffs** | Multi-stage conversation with state; unlock tools/capabilities after preconditions |
-| **Router** | Stateless classify → parallel specialists → synthesize; distinct verticals / knowledge sources |
+| **Subagents** | Central supervisor + isolated specialists; parallel fan-out; maps often to GCP **Coordinator** / **Hierarchical** |
+| **Skills** | One conversational agent; many specializations; progressive context load |
+| **Handoffs** | Multi-stage conversation with state; also GCP-like **Sequential** stage unlock |
+| **Router** | Stateless classify → parallel specialists → synthesize; GCP **Parallel** |
+| **Sequential pipeline** | Rigid A→B→C without model orchestration (GCP Sequential) |
+| **Custom / Swarm / etc.** | Only via `gcp-agentic-patterns.md` with explicit tradeoffs |
 
-Reference framing: [LangChain multi-agent patterns](https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture), [Skills vs Workflows vs Agents](https://danielmiessler.com/blog/when-to-use-skills-vs-commands-vs-agents), [Anthropic Skills (enterprise)](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise).
+Always record the matching **GCP agentic pattern** and run **primitive selection** (Script → Skill → Agent) so blueprints justify every script, skill, and agent.
+
+Reference framing: [LangChain multi-agent patterns](https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture), [Google Cloud agentic design patterns](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system), [Skills vs Workflows vs Agents](https://danielmiessler.com/blog/when-to-use-skills-vs-commands-vs-agents), [Anthropic Skills (enterprise)](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise).
 
 ---
 

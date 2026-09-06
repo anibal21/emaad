@@ -43,25 +43,20 @@ Priorities if conflict:
 ## Pattern
 
 - primary: 
+- gcp_pattern: 
+- gcp_requirements: 
 - secondary: 
 - tradeoff_statement: 
 - rejected: 
 
-## Agents (names)
+## Primitives (draft → final)
 
-- 
-
-## Skills (names)
-
-- 
-
-## Scripts (names)
-
-- 
-
-## MCP
-
-- none | list: 
+- agents: 
+- skills: 
+- workflows: 
+- scripts: 
+- mcp: 
+- selection_rationale: 
 
 ## HITL summary
 

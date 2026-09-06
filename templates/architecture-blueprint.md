@@ -14,15 +14,22 @@
 
 ## 2. Primary pattern
 
-**Pattern:** {{primary_pattern}}
+**EMAAD pattern:** {{primary_pattern}}
+
+**GCP pattern:** {{gcp_pattern}}  
+([reference](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system))
 
 **Tradeoff statement:** {{tradeoff_statement}}
+
+**GCP requirements (A–E):** 
 
 **Binding constraints:** 
 
 **Rejected alternatives:** 
 
 **Secondary patterns (if any):** 
+
+**Primitive selection rationale:** 
 
 ## 3. Ecosystem overview
 

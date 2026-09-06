@@ -14,8 +14,8 @@ MIT licensed. Built for individuals and enterprises who need agent ecosystems th
 
 Teams jump to multi-agent setups too early, invent overlapping roles, bolt on MCPs without allowlists, and discover token bloat or security gaps in production. EMAAD encodes software-engineering discipline for agentic systems:
 
-- Choose architecture with evidence, not fashion ([LangChain pattern guide](https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture))
-- Separate **Skills / Workflows / Agents / Scripts / MCP** cleanly ([Miessler hierarchy](https://danielmiessler.com/blog/when-to-use-skills-vs-commands-vs-agents))
+- Choose architecture with evidence ([LangChain](https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture), [Google Cloud agentic patterns](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system))
+- Separate **Skills / Workflows / Agents / Scripts / MCP** cleanly ([Miessler hierarchy](https://danielmiessler.com/blog/when-to-use-skills-vs-commands-vs-agents)); Ema asks structured questions to pick each primitive
 - Govern Skills like production software ([Anthropic enterprise Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise))
 - Harness MCP and agent risk with [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/) and related agentic controls
 - Optimize for **SRP**, **token budgets**, and **human-in-the-loop** that only interrupts when it matters

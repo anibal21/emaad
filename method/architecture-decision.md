@@ -1,20 +1,34 @@
 # Architecture Decision Framework
 
-Use this document in **phase 03**. Select **one primary pattern**. Secondary patterns require explicit justification (e.g., "Skills inside each router specialist").
+Use this document in **phase 03**. Select **one primary pattern** (EMAAD label) and record the matching **GCP pattern**. Secondary patterns require explicit justification.
 
-## Step 0 — Single-agent baseline
+Complementary sources:
+- LangChain multi-agent framing (subagents, skills, handoffs, router)
+- [Google Cloud: choose agentic design pattern](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system) — full tables in [`gcp-agentic-patterns.md`](./gcp-agentic-patterns.md)
+- After pattern choice → [`primitive-selection.md`](./primitive-selection.md) for scripts / skills / agents
+
+## Step 0 — Non-agentic gate
+
+Ask: *Is this solvable without an agent (single model call / batch job / plain automation)?*
+
+| Signal | Action |
+|--------|--------|
+| Summarize, translate, classify, one-shot generation | Prefer **non_agentic**; optional script/skill only |
+| Needs tools, multi-step autonomy, dynamic plans | Continue |
+
+## Step 1 — Single-agent baseline
 
 Ask: *If we had infinite discipline, could one agent + tools + progressive skills succeed?*
 
 | Signal | Prefer |
 |--------|--------|
-| Few domains, shared context OK, one team owns prompts | **Single-agent + Skills** |
+| Few domains, shared context OK, one team owns prompts | **Single-agent + Skills** (+ ReAct inside if dynamic) |
 | No need for parallel isolated reasoning | Stay single-agent |
 | No staged unlock of capabilities mid-conversation | Stay single-agent |
 
-Only leave the baseline when a **binding constraint** appears in Step 1.
+Only leave the baseline when a **binding constraint** appears in Step 2 **or** GCP workload tables demand multi-agent.
 
-## Step 1 — Binding constraints checklist
+## Step 2 — Binding constraints checklist (EMAAD)
 
 Mark each true/false:
 
@@ -26,17 +40,41 @@ Mark each true/false:
 6. **Central workflow control**: A supervisor must decide routing and combine results; specialists should not talk to the user.
 7. **Direct specialist UX**: The same agent must stay in continuous direct dialogue with the user while specializing.
 
-## Step 2 — Pattern mapping
+## Step 3 — GCP requirements (mandatory)
 
-| If these are true… | Primary pattern |
-|--------------------|-----------------|
-| Mostly false on 1–5 | **Single-agent + Skills** |
-| 1 or 2 or 6; specialists don't need user chat | **Subagents** |
-| 2 and 7; soft boundaries; progressive disclosure enough | **Skills** (quasi-multi-agent) |
-| 4 and 7 | **Handoffs** |
-| 3 or 5; per-request fan-out | **Router** |
-| 1 + 3 + 6 | **Subagents** (often with Deep Agents–style planning) |
-| 5 + conversation memory needed | **Router wrapped as a tool** of a stateful conversational agent |
+Capture answers from [`gcp-agentic-patterns.md`](./gcp-agentic-patterns.md) sections A–E:
+
+- Task: predefined vs open-ended; model orchestration needed?  
+- Latency vs quality  
+- Multi-call cost budget  
+- Human intervention needs  
+- Single-agent already failing / expected to fail with many tools?
+
+Classify workload family:
+
+| Family | Examples of GCP picks |
+|--------|----------------------|
+| Deterministic | Sequential, Parallel, Iterative refinement |
+| Dynamic orchestration | Single-agent, Coordinator, Hierarchical, Swarm |
+| Iteration | ReAct, Loop, Review & critique, Iterative refinement |
+| Special | HITL overlay, Custom logic |
+
+## Step 4 — Pattern mapping (unified)
+
+| If these are true… | EMAAD primary | Typical GCP |
+|--------------------|---------------|-------------|
+| Non-agentic gate hit | `non_agentic` | (none) |
+| Mostly false on constraints 1–5; early PoC | `single_agent_skills` | Single-agent (+ ReAct) |
+| Fixed A→B→C; no model orchestration | `sequential_pipeline` / `handoffs` | Sequential |
+| Independent concurrent subtasks; code fan-out | `router` / `parallel_subagents` | Parallel |
+| Dynamic route to specialists; central control | `subagents` | Coordinator |
+| Nested ambiguous planning | `subagents` (+ hierarchy note) | Hierarchical decomposition |
+| Generator then validator | `subagents` or sequential pair | Review & critique |
+| Quality via cycles + exit condition | secondary `iterative_refinement` / `loop` | Loop / Iterative refinement |
+| Peer debate, no supervisor | `swarm` (discourage; waiver) | Swarm |
+| Soft multi-domain, direct UX | `skills` | Single-agent + progressive skills |
+| Stateful stage unlock + user chat | `handoffs` | Sequential + HITL as needed |
+| Branches beyond templates | `custom_logic` | Custom logic |
 
 ### Capability matrix (qualitative)
 
@@ -47,28 +85,35 @@ Mark each true/false:
 | Handoffs | Weak | Weak | Excellent | Excellent |
 | Router | Good | Excellent | Weak | Medium |
 
-### Cost intuition (from public pattern analysis)
+### Cost intuition
 
 | Workload | Better patterns |
 |----------|-----------------|
 | One-shot single task | Skills / Handoffs / Router (fewer hops than Subagents) |
-| Repeat requests in-thread | Skills / Handoffs (state saves calls) |
-| Multi-domain large packs | Subagents / Router (isolation beats skills token accumulation) |
+| Repeat requests in-thread | Skills / Handoffs |
+| Multi-domain large packs | Subagents / Router |
+| Rigid pipeline | Sequential (often cheaper than Coordinator) |
+| Swarm / Hierarchical | Highest cost—demand proof |
 
-## Step 3 — Forced tradeoff
+## Step 5 — Forced tradeoff
 
-Write one sentence the human must accept:
+> We choose **{emaad_pattern}** (GCP: **{gcp_pattern}**) because **{constraints + GCP A–E}**, accepting **{cost: extra hops | token accumulation | sequential rigidity | routing overhead | loop risk}**.
 
-> We choose **{pattern}** because **{binding constraints}**, accepting **{cost: extra hops | token accumulation | sequential limits | routing overhead}**.
+## Step 6 — Primitive handoff
 
-## Step 4 — Anti-patterns
+Immediately apply [`primitive-selection.md`](./primitive-selection.md): draft the candidate **agents / skills / scripts** lists before leaving phase 03 (refine in 04–06).
+
+## Step 7 — Anti-patterns
 
 - Multi-agent because "agents are cool"
+- Coordinator when sequential/parallel **code** workflow would do
+- Swarm without exit conditions and cost waiver
 - Router + Handoffs + Subagents all primary with no ownership map
 - One agent with 40 overlapping skills and no bundles
 - Specialists with production write tools and no HITL
 - Shared MCP with admin scopes across all agents
+- Creating agents for deterministic merges/checks (use scripts)
 
-## Step 5 — Record
+## Step 8 — Record
 
-Fill session state fields: `primary_pattern`, `secondary_patterns`, `constraints_true`, `tradeoff_statement`, `rejected_patterns`.
+Session state fields: `gcp_requirements`, `gcp_pattern`, `primary_pattern`, `secondary_patterns`, `constraints_true`, `tradeoff_statement`, `rejected_patterns`, draft `primitives`.

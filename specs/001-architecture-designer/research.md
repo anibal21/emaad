@@ -51,8 +51,16 @@
 
 **Rationale**: LangChain performance notes show skills accumulate tokens; subagents/router isolate large packs at cost of extra calls.
 
+## 8. Primitive selection (GCP + scripts/skills/agents)
+
+**Decision**: Integrate [Google Cloud agentic design patterns](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system) as first-class interview questions and pattern catalog, mapped to EMAAD labels; add `primitive-selection.md` so Ema systematically chooses scripts, skills, and agents (Script → Skill → Agent).
+
+**Rationale**: User request to complement EMA with use-case questions from GCP architecture guidance; closes the gap between pattern choice and concrete primitives.
+
+**Alternatives considered**: Replacing LangChain vocabulary entirely (rejected—keep dual labels); linking GCP doc only in README without method integration (rejected—agents would not ask the questions).
+
 ## Open questions for future iterations
 
 - Optional machine-checkable validators for blueprint completeness  
-- Adapters exporting to LangGraph / Deep Agents project scaffolds  
+- Adapters exporting to LangGraph / Deep Agents / ADK scaffolds  
 - Multilingual interview packs (method authored in Spanish/English dual where helpful)

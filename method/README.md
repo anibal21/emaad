@@ -19,7 +19,9 @@ This folder is the **runtime** of EMAAD. An agent loads `skills/emaad-designer`,
 | [boot-menu.md](./boot-menu.md) | Post-greeting options 1 / 2 / 3 |
 | [ema-trunk.md](./ema-trunk.md) | Trunk-based improvements to Ema |
 | [interview-protocol.md](./interview-protocol.md) | Global conversation rules |
-| [architecture-decision.md](./architecture-decision.md) | Pattern selection tree |
+| [architecture-decision.md](./architecture-decision.md) | Pattern selection (EMAAD + GCP) |
+| [gcp-agentic-patterns.md](./gcp-agentic-patterns.md) | Google Cloud agentic pattern catalog |
+| [primitive-selection.md](./primitive-selection.md) | Choose scripts / skills / agents |
 | [primitive-taxonomy.md](./primitive-taxonomy.md) | Skills / Workflows / Agents / Scripts / MCP |
 | [srp-and-boundaries.md](./srp-and-boundaries.md) | Single responsibility rules |
 | [token-optimization.md](./token-optimization.md) | Context & cost strategy |

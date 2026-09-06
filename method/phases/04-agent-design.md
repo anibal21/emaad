@@ -6,12 +6,14 @@ Name agents with unique responsibilities, scopes, and interaction rules.
 
 ## Do
 
-1. For single-agent + skills: define **one** lead agent card; specialists are skills unless isolation demands agents.  
-2. For subagents: define supervisor + specialists (as tool-agents).  
-3. For handoffs: define stage agents and transition conditions.  
-4. For router: define router/synthesizer + vertical specialists.  
-5. Apply [`../srp-and-boundaries.md`](../srp-and-boundaries.md).  
-6. Draft Agent Cards from `templates/agent-card.md`.  
+1. Start from the draft agent list in phase 03 / [`../primitive-selection.md`](../primitive-selection.md)—do not invent agents outside that rationale without updating session state.  
+2. For single-agent + skills: define **one** lead agent card; specialists are skills unless isolation demands agents.  
+3. For subagents / GCP coordinator or hierarchical: define supervisor (+ mid levels if needed) + specialists.  
+4. For handoffs / sequential: define stage agents and transition conditions.  
+5. For router / parallel: define router/synthesizer + vertical specialists.  
+6. For review & critique: ensure Generator and Critic are separate SRP mandates (or critic partially replaced by scripts).  
+7. Apply [`../srp-and-boundaries.md`](../srp-and-boundaries.md).  
+8. Draft Agent Cards from `templates/agent-card.md`.  
 
 ## Ask per agent
 

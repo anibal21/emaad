@@ -6,11 +6,13 @@ Package domain knowledge as skills with progressive disclosure and task workflow
 
 ## Do
 
-1. Map domains → skills (prefer narrow, consolidate later with evals).  
-2. For each skill: triggers, workflows, context files, owning team.  
-3. Assign skills to agents (bundles).  
-4. Draft Skill Cards + Workflow Cards.  
-5. Plan coexistence: ensure descriptions don't collide.  
+1. Start from phase 03 skill candidates in [`../primitive-selection.md`](../primitive-selection.md).  
+2. Map remaining judgment/procedure domains → skills (prefer narrow, consolidate later with evals).  
+3. For each skill: triggers, workflows, context files, owning team.  
+4. Assign skills to agents (bundles) per pattern (skills often live *inside* specialists).  
+5. Draft Skill Cards + Workflow Cards.  
+6. Plan coexistence: ensure descriptions don't collide.  
+7. Ask: what still looks like an agent but is really a skill? Downgrade when possible.  
 
 ## Ask
 

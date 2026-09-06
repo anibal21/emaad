@@ -104,6 +104,9 @@ A platform owner wants fewer interrupts but no silent high-risk actions.
 - **FR-017**: Option 3 MUST follow trunk-based development on the Ema/EMAAD designer (`method/ema-trunk.md`), versioning method changes via Git on `main` (or short-lived branches merged to trunk), without creating a client folder under `projects/` unless adding `examples/`.
 - **FR-003**: Designer MUST maintain a session-state artifact under `projects/<slug>/` that accumulates answers and decisions (Options 1–2).
 - **FR-018**: Designer MUST keep `projects/index.json` updated when creating a project or when status/`updated`/domain change.
+- **FR-019**: Designer MUST apply Google Cloud agentic pattern guidance (requirement questions + pattern catalog) via `method/gcp-agentic-patterns.md`, record `gcp_pattern` / `gcp_requirements`, and map to an EMAAD primary pattern.
+- **FR-020**: Designer MUST use `method/primitive-selection.md` so every recommended script, skill, and agent is justified from the use case and chosen pattern (prefer Script → Skill → Agent).
+- **FR-021**: Designer MUST ask whether a non-agentic solution suffices before recommending multi-agent architectures.
 - **FR-004**: Designer MUST select a primary orchestration pattern using `method/architecture-decision.md` and record rationale + tradeoffs.
 - **FR-005**: Designer MUST produce agent, skill, workflow, and script cards using `templates/`.
 - **FR-006**: Designer MUST apply SRP checks from `checklists/srp.md` and resolve overlaps before synthesis.
