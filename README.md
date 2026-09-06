@@ -32,12 +32,24 @@ Teams jump to multi-agent setups too early, invent overlapping roles, bolt on MC
 Hola Ema
 ```
 
-That is the entry point. Ema loads the EMAAD method, confirms new vs resume session, and begins phase 00.
+Ema responds with the boot menu:
 
-English works too (`Hi Ema` / `Hello Ema`). Same behavior.
+```text
+1. Trabajar en un nuevo proyecto
+2. Trabajar en un proyecto en curso
+3. Trabajar en mejoras de Ema
+```
 
-4. Answer the interview. Push back when a recommendation feels wrong—the method expects challenge.
-5. Receive the deliverable package under `sessions/<your-project>/` (or paste into your target repo).
+| Option | What happens |
+|--------|----------------|
+| **1** | Creates `projects/<slug>/` and registers it in `projects/index.json`, then starts the design interview |
+| **2** | Lists projects from `projects/index.json` and resumes the one you pick |
+| **3** | Improves Ema herself on `main` (trunk-based SDD + Git versioning) |
+
+English greetings (`Hi Ema` / `Hello Ema`) get the same menu in English.
+
+4. For project modes: answer the interview; push back when a recommendation feels wrong.
+5. Deliverables land under `projects/<your-slug>/`. The index stays the catalog for Option 2.
 
 Optional: copy `skills/emaad-designer` into your personal or project skills folder so the agent auto-discovers Ema.
 
@@ -64,12 +76,15 @@ Optional: copy `skills/emaad-designer` into your personal or project skills fold
 constitution.md          # Binding principles (read first)
 specs/001-.../           # Product spec, plan, research, tasks (SDD)
 method/                  # Executable conversation method
-  phases/                # Interview phases 00–09
+  boot-menu.md           # Hola Ema → options 1/2/3
+  ema-trunk.md           # Option 3: trunk-based Ema improvements
+  phases/                # Interview phases 00–09 (project modes)
   harness/               # Security harness (MCP, skills, agents)
+projects/                # Client design packages + index.json
 templates/               # Deliverable templates
 checklists/              # SRP, security, tokens, HITL
-skills/emaad-designer/   # Skill that drives the conversation
-agents/                  # Optional specialist roles for the designer itself
+skills/emaad-designer/   # Skill that drives Ema
+agents/                  # Optional specialist roles
 examples/                # Worked blueprints
 ```
 
@@ -78,12 +93,13 @@ examples/                # Worked blueprints
 ## Method at a glance
 
 ```text
-Intake → Domain map → Constraints → Pattern selection
-    → Agent design → Skills/Workflows → Scripts
-    → Security harness → HITL governance → Synthesis
+Hola Ema → Boot menu
+  ├─ 1 Nuevo proyecto     → projects/<slug>/ + index → phases 00–09
+  ├─ 2 Proyecto en curso  → index → load → resume phases
+  └─ 3 Mejoras de Ema     → trunk-based SDD on main → commit
 ```
 
-Each phase asks only the questions that unlock the next decision. Session state prevents re-asking. Security and HITL are not afterthoughts—they are gates before synthesis.
+Each project phase asks only the questions that unlock the next decision. Security and HITL are gates before synthesis.
 
 ---
 

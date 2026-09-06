@@ -5,15 +5,19 @@ This folder is the **runtime** of EMAAD. An agent loads `skills/emaad-designer`,
 ## How to run
 
 1. Read [`../constitution.md`](../constitution.md)
-2. Follow [`interview-protocol.md`](./interview-protocol.md)
-3. Walk [`phases/`](./phases/) 00 → 09
-4. Apply decision aids and harness docs when a phase references them
-5. Fill [`../templates/`](../templates/) and verify with [`../checklists/`](../checklists/)
+2. User says **Hola Ema** → [`boot-menu.md`](./boot-menu.md)
+3. Follow [`interview-protocol.md`](./interview-protocol.md)
+4. Options 1–2: walk [`phases/`](./phases/) 00 → 09 under `projects/<slug>/`
+5. Option 3: [`ema-trunk.md`](./ema-trunk.md)
+6. Apply decision aids and harness docs when a phase references them
+7. Fill [`../templates/`](../templates/) and verify with [`../checklists/`](../checklists/)
 
 ## Document index
 
 | Doc | Purpose |
 |-----|---------|
+| [boot-menu.md](./boot-menu.md) | Post-greeting options 1 / 2 / 3 |
+| [ema-trunk.md](./ema-trunk.md) | Trunk-based improvements to Ema |
 | [interview-protocol.md](./interview-protocol.md) | Global conversation rules |
 | [architecture-decision.md](./architecture-decision.md) | Pattern selection tree |
 | [primitive-taxonomy.md](./primitive-taxonomy.md) | Skills / Workflows / Agents / Scripts / MCP |

@@ -98,7 +98,12 @@ A platform owner wants fewer interrupts but no silent high-risk actions.
 - **FR-001**: Designer MUST follow `constitution.md` and refuse to skip security/HITL gates for "Approved" blueprints.
 - **FR-002**: Designer MUST run the phased interview in `method/phases/`, adapting depth to greenfield vs brownfield.
 - **FR-013**: The designer persona MUST be addressed as **Ema**; user-facing docs MUST present **Hola Ema** as the canonical session entry (accept `Hi Ema` / `Hello Ema`).
-- **FR-003**: Designer MUST maintain a session-state artifact that accumulates answers and decisions.
+- **FR-014**: After Hola Ema, the designer MUST present a boot menu with exactly: (1) nuevo proyecto (2) proyecto en curso (3) mejoras de Ema — and branch accordingly before phase work.
+- **FR-015**: Option 1 MUST create `projects/<slug>/`, seed session state, and register the project in `projects/index.json`.
+- **FR-016**: Option 2 MUST list projects from `projects/index.json` for selection and resume the chosen package; it MUST NOT invent unlisted projects without offering index registration.
+- **FR-017**: Option 3 MUST follow trunk-based development on the Ema/EMAAD designer (`method/ema-trunk.md`), versioning method changes via Git on `main` (or short-lived branches merged to trunk), without creating a client folder under `projects/` unless adding `examples/`.
+- **FR-003**: Designer MUST maintain a session-state artifact under `projects/<slug>/` that accumulates answers and decisions (Options 1–2).
+- **FR-018**: Designer MUST keep `projects/index.json` updated when creating a project or when status/`updated`/domain change.
 - **FR-004**: Designer MUST select a primary orchestration pattern using `method/architecture-decision.md` and record rationale + tradeoffs.
 - **FR-005**: Designer MUST produce agent, skill, workflow, and script cards using `templates/`.
 - **FR-006**: Designer MUST apply SRP checks from `checklists/srp.md` and resolve overlaps before synthesis.
@@ -119,10 +124,12 @@ A platform owner wants fewer interrupts but no silent high-risk actions.
 ### Key Entities
 
 - **Session State**: Running record of answers, constraints, inventories, decisions.
+- **Project Index**: `projects/index.json` registry of design packages for Option 2.
 - **Architecture Blueprint**: Top-level design package and status.
 - **Agent / Skill / Workflow / Script Card**: Primitive definitions with SRP mandates.
 - **MCP Allowlist Entry**: Trust boundary with scopes and mitigations.
 - **Gate Record**: HITL or security approval checkpoint.
+- **Ema Mode**: `project_new` | `project_continue` | `ema_improve`.
 
 ---
 

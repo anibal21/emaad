@@ -21,10 +21,13 @@ Thank you for improving a method that others will run as law in design conversat
 ## Process (SDD)
 
 1. Read `constitution.md` — amendments need the Article X process  
-2. For method changes: update `specs/001-architecture-designer/` if requirements shift  
-3. Keep `method/`, `templates/`, `checklists/`, and `skills/emaad-designer` consistent  
-4. Add or update an example when behavior changes  
-5. Open a PR with: problem, change, how an agent session behaves differently  
+2. Prefer **Option 3 (Hola Ema)** or explicit PRs for designer changes; trunk = `main` (`method/ema-trunk.md`)  
+3. For method changes: update `specs/001-architecture-designer/` if requirements shift  
+4. Keep `method/`, `templates/`, `checklists/`, and `skills/emaad-designer` consistent  
+5. Add or update an example when behavior changes  
+6. Open a PR with: problem, change, how an agent session behaves differently — or commit to `main` for small trunk changes when maintainers agree  
+
+Client design work belongs under `projects/` (boot Options 1–2), not as drive-by edits to the method.
 
 ## Style
 

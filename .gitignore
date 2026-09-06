@@ -6,7 +6,7 @@ Thumbs.db
 .vscode/
 *.code-workspace
 
-# Local session outputs (generated during design conversations)
+# Legacy path (unused; prefer projects/)
 sessions/
 *.session.md
 .emaad-cache/

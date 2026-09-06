@@ -15,7 +15,7 @@ Build EMAAD as a **Markdown-native, conversation-executed method** (SDD). No app
 | **Primary language** | Markdown (method + templates) |
 | **Execution runtime** | Any capable coding/agent IDE (Cursor, Claude Code, etc.) |
 | **Optional helpers** | Later: small validators (Python/Node) for checklist completeness—out of P1 scope |
-| **Storage** | Git; session outputs in `sessions/` (gitignored) or user-chosen path |
+| **Storage** | Git; client packages in `projects/<slug>/` with `projects/index.json`; Ema improvements on `main` |
 | **Dependencies** | None required to run the method |
 | **Target platform** | Tool-agnostic agent ecosystems |
 | **Performance goal** | Minimize interview turns while maximizing decision quality |

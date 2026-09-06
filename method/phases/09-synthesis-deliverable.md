@@ -16,7 +16,7 @@ Assemble the architecture package, run checklists, set status.
 ## Deliverable tree
 
 ```text
-sessions/<slug>/
+projects/<slug>/
   session-state.md
   architecture-blueprint.md
   agents/*.md
@@ -28,11 +28,14 @@ sessions/<slug>/
   ecosystem.mmd   # or embed in blueprint
 ```
 
+Also update `projects/index.json` (`status`, `updated`, `domain` if known).
+
 ## Exit criteria
 
 - Spec success criteria SC-002–SC-005 satisfiable by inspection  
 - Gate **G-HUMAN** for Approved  
 - Open waivers listed with owners  
+- Index entry matches folder status  
 
 ## Aftercare
 

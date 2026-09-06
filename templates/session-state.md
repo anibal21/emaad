@@ -3,11 +3,13 @@
 - **Started**: {{date}}
 - **Status**: Draft
 - **Phase**: 00-intake
+- **Path**: projects/{{project_slug}}/
+- **ema_mode**: project_new | project_continue
 - **Language**: 
 
 ## Intake
 
-- mode: 
+- mode: greenfield | brownfield
 - domain: 
 - mission: 
 - stakeholders: 
