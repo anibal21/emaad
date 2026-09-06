@@ -61,8 +61,8 @@ Do **not** ask open-ended “what do you want?” beyond this menu. Wait for the
 ### Option 3
 
 1. Confirm improvement theme.
-2. Follow `method/ema-trunk.md`: next `specs/00N`, branch `00N-…`, implement, **open PR to `main`**, wait for human approve/merge.
-3. Do **not** commit Ema product changes directly to `main` unless the human explicitly overrides.
+2. Follow `method/ema-trunk.md`: next `specs/00N`, branch `00N-…`, implement, set spec **Converged** on the branch, open **one** PR to `main`, wait for human approve/merge.
+3. Do **not** commit directly to `main` unless explicitly overridden; do **not** open a second PR only to mark Converged.
 4. After merge only: pull `main` and consider the next `00N+1`.
 
 ## Operating loop (Options 1–2)

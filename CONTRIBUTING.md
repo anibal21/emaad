@@ -26,9 +26,9 @@ Thank you for improving a method that others will run as law in design conversat
 2. Use **Option 3 (Hola Ema)** or an explicit PR for designer changes  
 3. From latest `main`: create `specs/00N-short-slug/` and branch `00N-short-slug`  
 4. Implement in `method/`, `templates/`, `checklists/`, `skills/emaad-designer`  
-5. Push the branch and open a **Pull Request to `main`** (`gh pr create`; see `.github/PULL_REQUEST_TEMPLATE.md`)  
+5. Push the branch and open **one Pull Request to `main`** (`gh pr create`; see `.github/PULL_REQUEST_TEMPLATE.md`). Spec status on the branch should already be **Converged** when the work is complete.  
 6. Wait for maintainer **approve + merge**  
-7. Pull `main`; mark spec Converged; only then start `00N+1`  
+7. Pull `main`; delete the feature branch; only then start `00N+1` — **no second PR** for status stamps  
 
 Details: [`method/ema-trunk.md`](./method/ema-trunk.md) · [`specs/README.md`](./specs/README.md)
 
