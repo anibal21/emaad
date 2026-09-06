@@ -1,0 +1,33 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.code-workspace
+
+# Local session outputs (generated during design conversations)
+sessions/
+*.session.md
+.emaad-cache/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+**/credentials*
+**/secrets*
+
+# Python / tooling (if used for validators later)
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node (if used for doc generators)
+node_modules/
+dist/
+.turbo/
