@@ -2,8 +2,8 @@
 
 **Feature**: `007-inline-concepts-itemwise-sets`  
 **Created**: 2026-09-06  
-**Status**: Active  
-**Branch**: `007-inline-concepts-itemwise-sets`  
+**Status**: Converged  
+**Merged**: PR https://github.com/anibal21/emaad/pull/3 (`88c7b13`)  
 **Depends on**: `004-one-question-gitignore`, `006-pr-workflow-ema-trunk`
 
 ## Summary
@@ -27,10 +27,10 @@ When a question requires filling the **same field for every item** in a collecte
 
 ## Acceptance
 
-- [ ] questioning.md documents inline gloss + item-wise sets  
-- [ ] phase 01 uses item-wise work_type / systems / user_facing  
-- [ ] skill operating loop mentions item-wise expansion  
-- [ ] PR opened to `main`  
+- [x] questioning.md documents inline gloss + item-wise sets  
+- [x] phase 01 uses item-wise work_type / systems / user_facing  
+- [x] skill operating loop mentions item-wise expansion  
+- [x] PR opened to `main`  
 
 ## Out of scope
 

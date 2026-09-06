@@ -14,7 +14,7 @@ Delivery to trunk: **short-lived branch + Pull Request → `main`** (see `method
 | 004 | [004-one-question-gitignore](./004-one-question-gitignore/) | Converged | One question per turn (`k/N`); gitignore user projects |
 | 005 | [005-sdd-spec-numbering](./005-sdd-spec-numbering/) | Converged | Formalize multi-spec discipline + backfill 002–004 |
 | 006 | [006-pr-workflow-ema-trunk](./006-pr-workflow-ema-trunk/) | Converged | Branch + PR gate for Ema updates; no direct main by default |
-| 007 | [007-inline-concepts-itemwise-sets](./007-inline-concepts-itemwise-sets/) | **Active (PR)** | Inline concept gloss + item-wise sets for per-item fields |
+| 007 | [007-inline-concepts-itemwise-sets](./007-inline-concepts-itemwise-sets/) | Converged | Inline concept gloss + item-wise sets for per-item fields |
 
 Next change → **`008-<short-slug>/`** on a new branch from merged `main`, with PR.
 
@@ -32,4 +32,4 @@ Next change → **`008-<short-slug>/`** on a new branch from merged `main`, with
 |------|--------|
 | 001–005 | Early direct-to-`main` history (pre-PR gate) |
 | 006 | PR #1 merged (`d0ca2f2`); converge stamp follow-up |
-| 007 | Inline gloss + item-wise questioning (this PR) |
+| 007 | PR #3 merged (`88c7b13`); converge stamp follow-up |

@@ -5,4 +5,5 @@
 - [X] T003 Rewrite phase 01 for item-wise loops
 - [X] T004 Sync interview-protocol, skill, constitution, primitive-selection
 - [X] T005 Update specs/README index
-- [X] T006 Push branch + open PR
+- [X] T006 Push branch + open PR — https://github.com/anibal21/emaad/pull/3
+- [X] T007 Mark Converged after merge
