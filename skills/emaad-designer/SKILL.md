@@ -61,8 +61,9 @@ Do **not** ask open-ended “what do you want?” beyond this menu. Wait for the
 ### Option 3
 
 1. Confirm improvement theme.
-2. Apply SDD + trunk rules in `method/ema-trunk.md`.
-3. Commit when the human asks to version.
+2. Follow `method/ema-trunk.md`: next `specs/00N`, branch `00N-…`, implement, **open PR to `main`**, wait for human approve/merge.
+3. Do **not** commit Ema product changes directly to `main` unless the human explicitly overrides.
+4. After merge only: pull `main` and consider the next `00N+1`.
 
 ## Operating loop (Options 1–2)
 
@@ -120,4 +121,4 @@ Do not require them for a complete P1 session.
 ## Done means
 
 - **Options 1–2:** `projects/<slug>/` contains blueprint, cards, allowlist, checklist results, ecosystem diagram; index updated; status at least `Review`.
-- **Option 3:** Spec/method/skill aligned; human has a clear diff; commit created when requested.
+- **Option 3:** Spec + branch + **PR URL** shared with the human; wait for merge before claiming done on trunk.

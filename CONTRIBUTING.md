@@ -18,16 +18,19 @@ Thank you for improving a method that others will run as law in design conversat
 - Expanding scope into a full application without an accepted spec change
 - Vague multi-agent recommendations without constraints
 - Appending new requirements into a **frozen/converged** spec folder
+- **Pushing Ema product changes straight to `main`** (use a PR unless explicitly overridden)
 
-## Process (SDD)
+## Process (SDD + PR)
 
 1. Read `constitution.md` — amendments need the Article X process  
-2. Prefer **Option 3 (Hola Ema)** or explicit PRs for designer changes; trunk = `main` (`method/ema-trunk.md`)  
-3. **Create `specs/00N-short-slug/`** for the change (see [`specs/README.md`](./specs/README.md)). Never extend frozen `001`.  
+2. Use **Option 3 (Hola Ema)** or an explicit PR for designer changes  
+3. From latest `main`: create `specs/00N-short-slug/` and branch `00N-short-slug`  
 4. Implement in `method/`, `templates/`, `checklists/`, `skills/emaad-designer`  
-5. Mark the spec Converged; update the specs index  
-6. Add or update an example when behavior changes  
-7. Commit to `main` (or short-lived PR) with a clear message; push when asked  
+5. Push the branch and open a **Pull Request to `main`** (`gh pr create`; see `.github/PULL_REQUEST_TEMPLATE.md`)  
+6. Wait for maintainer **approve + merge**  
+7. Pull `main`; mark spec Converged; only then start `00N+1`  
+
+Details: [`method/ema-trunk.md`](./method/ema-trunk.md) · [`specs/README.md`](./specs/README.md)
 
 Client design work belongs under `projects/` (boot Options 1–2; gitignored)—not as drive-by edits to the method.
 

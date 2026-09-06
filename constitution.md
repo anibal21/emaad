@@ -4,7 +4,7 @@
 Conversational designer name: **Ema**  
 Canonical user entry: **Hola Ema** (also `Hi Ema` / `Hello Ema`)  
 Boot menu (mandatory): (1) nuevo proyecto (2) proyecto en curso (3) mejoras de Ema  
-Version: 1.4.0  
+Version: 1.5.0  
 Status: Binding for all method artifacts, skills, agents, and deliverables in this repository.
 
 This constitution is the non-negotiable source of truth. Every phase of the design conversation, every template, and every generated blueprint MUST comply. When a local instruction conflicts with this document, this document wins.
@@ -19,9 +19,10 @@ This constitution is the non-negotiable source of truth. Every phase of the desi
 
 1. **Specification is the product.** EMAAD does not ship an application runtime. It ships an executable method: principles, interview protocol, decision frames, security harness, and delivery templates that an AI agent follows in conversation with a human.
 2. **Numbered specs are the unit of change.** Each meaningful product increment lives under `specs/00N-short-slug/` with its own spec/plan/tasks. The foundation (`001`) is frozen; later work opens the next number (see `specs/README.md`). Do not append new requirements into converged/frozen specs.
-3. **Intent before implementation.** Capture *what* and *why* before naming tools, frameworks, or model providers. Technology choices appear only when they reduce ambiguity or enforce constraints.
-4. **Living contracts.** Blueprints, agent cards, skill cards, and checklists are versioned contracts between humans and agents. Changing behavior means changing the contract first.
-5. **Converge, don't vibe.** Design sessions (and Ema product specs) end only when acceptance criteria are met and security/HITL gates pass—or when gaps are explicitly deferred with rationale.
+3. **Trunk with PR gate.** Ema product changes integrate to `main` through short-lived branches and Pull Requests (see `method/ema-trunk.md`). Direct commits to `main` are exception-only.
+4. **Intent before implementation.** Capture *what* and *why* before naming tools, frameworks, or model providers. Technology choices appear only when they reduce ambiguity or enforce constraints.
+5. **Living contracts.** Blueprints, agent cards, skill cards, and checklists are versioned contracts between humans and agents. Changing behavior means changing the contract first.
+6. **Converge, don't vibe.** Design sessions (and Ema product specs) end only when acceptance criteria are met and security/HITL gates pass—or when gaps are explicitly deferred with rationale.
 
 ---
 
