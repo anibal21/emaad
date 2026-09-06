@@ -70,10 +70,15 @@ Do **not** ask open-ended “what do you want?” beyond this menu. Wait for the
 ```text
 boot menu → branch
 while phase not complete:
-  announce N for this phase
-  for k in 1..N:
-    ask exactly one question as Pregunta k/N
-    update session-state + index timestamps/status
+  announce phase / sets
+  for each phase step:
+    if step is item-wise set:
+      for i in 1..M:
+        ask exactly one item as ítem i/M (inline gloss if jargon)
+        update session-state
+    else:
+      ask exactly one question as Pregunta k/N (inline gloss if jargon)
+      update session-state + index timestamps/status
   check exit criteria
   advance phase
 synthesize package under projects/<slug>/
@@ -81,7 +86,7 @@ run checklists
 set Review → await human for Approved
 ```
 
-Follow `method/questioning.md` strictly (never multi-question blocks).
+Follow `method/questioning.md` strictly (never multi-question blocks; never “map all items at once” as default; always gloss jargon in-question).
 
 ## Hard rules
 
