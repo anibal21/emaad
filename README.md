@@ -32,7 +32,7 @@ Teams jump to multi-agent setups too early, invent overlapping roles, bolt on MC
 Hola Ema
 ```
 
-Ema responds with the boot menu:
+Ema responds with a **language check** (Español / English) if not configured yet, then the boot menu:
 
 ```text
 1. Trabajar en un nuevo proyecto
@@ -40,13 +40,13 @@ Ema responds with the boot menu:
 3. Trabajar en mejoras de Ema
 ```
 
+Language is stored in `.emaad/config.json` (local). Technical terms stay in their original language with a short gloss in parentheses.
+
 | Option | What happens |
 |--------|----------------|
 | **1** | Creates `projects/<slug>/` and registers it in `projects/index.json`, then starts the design interview |
 | **2** | Lists projects from `projects/index.json` and resumes the one you pick |
-| **3** | Improves Ema herself on `main` (trunk-based SDD + Git versioning) |
-
-English greetings (`Hi Ema` / `Hello Ema`) get the same menu in English.
+| **3** | Improves Ema on a feature branch + one PR to `main` |
 
 4. For project modes: answer **one question at a time** (Ema shows `k/N`); push back when a recommendation feels wrong.
 5. Deliverables land under `projects/<your-slug>/` (local user work, gitignored). Copy `projects/index.example.json` → `index.json` on first use if needed.

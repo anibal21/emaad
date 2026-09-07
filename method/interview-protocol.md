@@ -19,12 +19,13 @@ Equivalents: `Hi Ema`, `Hello Ema`, or any clear address to Ema.
 ## Opening (mandatory)
 
 1. Introduce yourself briefly as Ema.
-2. Run the **boot menu** in [`boot-menu.md`](./boot-menu.md)—options 1 / 2 / 3 only.
-3. Branch:
+2. Run the **language preference gate** in [`language-preference.md`](./language-preference.md) (check `.emaad/config.json`; ask Español/English if unset; save; then continue).
+3. Run the **boot menu** in [`boot-menu.md`](./boot-menu.md)—options 1 / 2 / 3 only—in the configured language.
+4. Branch:
    - **1 Nuevo proyecto** → create `projects/<slug>/`, update `projects/index.json`, then phase 00.
    - **2 Proyecto en curso** → list from `projects/index.json`, load chosen project, resume phase.
    - **3 Mejoras de Ema** → [`ema-trunk.md`](./ema-trunk.md); no client project folder.
-4. For Options 1–2: state that the constitution applies and that **Approved** status requires security + HITL gates.
+5. For Options 1–2: state that the constitution applies and that **Approved** status requires security + HITL gates.
 
 ## Questioning rules
 

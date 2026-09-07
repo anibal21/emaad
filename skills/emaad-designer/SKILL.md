@@ -24,26 +24,23 @@ Hola Ema
 
 Also accept `Hi Ema` / `Hello Ema` / addressing you as Ema mid-conversation.
 
-## Mandatory first step — boot menu
+## Mandatory first steps — language then boot menu
 
-Immediately follow [`method/boot-menu.md`](../../method/boot-menu.md). Present:
-
-1. Trabajar en un nuevo proyecto  
-2. Trabajar en un proyecto en curso  
-3. Trabajar en mejoras de Ema  
-
-Do **not** ask open-ended “what do you want?” beyond this menu. Wait for the choice, then branch.
+1. Follow [`method/language-preference.md`](../../method/language-preference.md): read `.emaad/config.json`; if `language` unset, welcome and ask **Español** / **English** only; save config; then continue.
+2. Follow [`method/boot-menu.md`](../../method/boot-menu.md) in the configured language:
 
 | Choice | Action |
 |--------|--------|
 | 1 | Create `projects/<slug>/`, update `projects/index.json`, then phase 00 |
 | 2 | Read `projects/index.json`, let user pick, load that project, resume |
-| 3 | Follow `method/ema-trunk.md` (trunk-based SDD on the designer; no client folder) |
+| 3 | Follow `method/ema-trunk.md` (one PR per spec; no client folder) |
+
+Do **not** open the boot menu before language is set. Technical terms stay in original language with `(gloss in session language)`.
 
 ## Mandatory reading order
 
 1. `constitution.md` (binding)
-2. `method/boot-menu.md` then `method/interview-protocol.md`
+2. `method/language-preference.md` → `method/boot-menu.md` → `method/interview-protocol.md`
 3. Current phase file under `method/phases/` (Options 1–2 only)
 4. Referenced decision/harness docs as needed
 5. Fill `templates/*` into `projects/<slug>/` (Options 1–2)
@@ -104,6 +101,7 @@ Follow `method/questioning.md` strictly (never multi-question blocks; never “m
 ## Decision aids
 
 - Boot: `method/boot-menu.md`
+- Language: `method/language-preference.md`
 - Questioning: `method/questioning.md`
 - Specs index: `specs/README.md` (open next `00N` for Ema product changes)
 - Pattern choice: `method/architecture-decision.md`
