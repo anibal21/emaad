@@ -16,8 +16,9 @@ Delivery to trunk: **one short-lived branch + one Pull Request → `main`** (see
 | 006 | [006-pr-workflow-ema-trunk](./006-pr-workflow-ema-trunk/) | Converged | Branch + PR gate for Ema updates; no direct main by default |
 | 007 | [007-inline-concepts-itemwise-sets](./007-inline-concepts-itemwise-sets/) | Converged | Inline concept gloss + item-wise sets for per-item fields |
 | 008 | [008-single-pr-per-spec](./008-single-pr-per-spec/) | Converged | One PR per spec; no post-merge converge stamp |
+| 009 | [009-es-progress-labels](./009-es-progress-labels/) | Converged | Session-language progress labels (no Spanglish set names) |
 
-Next change → **`009-<short-slug>/`** on a new branch from merged `main`, with **one** PR.
+Next change → **`010-<short-slug>/`** on a new branch from merged `main`, with **one** PR.
 
 ## Rules
 
@@ -27,6 +28,7 @@ Next change → **`009-<short-slug>/`** on a new branch from merged `main`, with
 4. **Trunk = `main`.** Feature branches are short-lived; next feature starts after merge unless parallel work is explicitly allowed.
 5. Mark status: `Draft` → `Active` → **`Converged` (on feature branch when work is done, before/at PR)** → merged to trunk. Never a second PR only for the status flip.
 6. Abandoned specs: `Abandoned`.
+7. User-facing interview chrome (phase/set names) follows session language (see `009`).
 
 ## Mapping commits / PRs (historical)
 
@@ -36,3 +38,4 @@ Next change → **`009-<short-slug>/`** on a new branch from merged `main`, with
 | 006 | PR #1; mistaken follow-up stamp PR #2 (process debt) |
 | 007 | PR #3; stamp PR #4 superseded by 008 |
 | 008 | Single-PR rule; closes the double-PR pattern |
+| 009 | Session-language UI labels for progress/sets |

@@ -6,26 +6,30 @@ Decompose the problem into capability domains and work types (judgment vs determ
 
 ## Question set
 
-Follow [`../questioning.md`](../questioning.md) — including **inline gloss** and **item-wise sets**.
+Follow [`../questioning.md`](../questioning.md) — including **inline gloss**, **item-wise sets**, and **session-language labels**.
 
 ### Greenfield
 
-Announce at start: `Fase 01 — Domain map` (structure below; total human turns = 1 list + 3×M item-wise, where M = number of areas).
+Announce at start (es): `Fase 01 — Mapa de dominios` (1 lista + 3 conjuntos ítem a ítem; M = nº de áreas).
 
-| Step | Kind | Ask |
-|------|------|-----|
-| A | Phase question | List the major capability areas (about 5–12 bullets). |
-| B | **Item-wise set** `work_type` | For **each** area (`ítem i/M`): classify as juicio / procedimiento / chequeo determinista — **with inline gloss every time or at least on ítem 1/M and on request**. |
-| C | **Item-wise set** `systems` | For **each** area: does it need live system access (APIs, repos, tickets, browsers)? If yes, which systems? |
-| D | **Item-wise set** `user_facing` | For **each** area: talk directly to end users / customer? (yes/no) |
+| Step | Kind | Internal id | Display (es) | Ask |
+|------|------|-------------|--------------|-----|
+| A | Phase question | — | Lista de áreas | List the major capability areas (about 5–12 bullets). |
+| B | Item-wise set | `work_type` | **Tipo de trabajo** | For each area: juicio / procedimiento / chequeo determinista (+ gloss). |
+| C | Item-wise set | `systems` | **Acceso a sistemas** | For each area: ¿necesita conectarse a sistemas en vivo (APIs, repos, tickets, ERP, navegador, etc.)? Si sí, ¿cuáles? |
+| D | Item-wise set | `user_facing` | **¿Habla con usuarios finales?** | For each area: yes/no (cliente u otros usuarios finales, no solo el operador Tech Lead). |
 
-Progress examples:
+Progress example (es):
 
 ```text
-Fase 01 · conjunto work_type · ítem 1/12 — Toma de requerimientos:
-| Tipo | Significa | Ejemplo |
-…
-¿Cuál aplica?
+Fase 01 · Acceso a sistemas · ítem 1/12 — Toma de requerimientos:
+
+¿Esta área necesita conectarse a sistemas en vivo?
+| Opción | Significa |
+| Sí | Lee/escribe APIs, repos, tickets, ERP, etc. |
+| No | Solo conversación / docs locales |
+
+Responde sí o no (si sí, nombra los sistemas).
 ```
 
 ### Brownfield

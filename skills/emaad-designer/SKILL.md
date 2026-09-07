@@ -98,7 +98,8 @@ Follow `method/questioning.md` strictly (never multi-question blocks; never “m
 - Challenge unjustified multi-agent designs.
 - Match the user's language for conversation; keep template headings stable unless asked.
 - Project paths are always `projects/<slug>/` (not `sessions/`).
-- One question per turn with `k/N` progress (`method/questioning.md`).
+- One question per turn with `k/N` or `ítem i/M` progress (`method/questioning.md`).
+- **User-facing labels in session language** — never Spanglish like `conjunto systems`; use “Acceso a sistemas”, etc.
 - User project packages under `projects/<slug>/` are local user work (gitignored); keep `projects/index.json` in sync locally.
 
 ## Decision aids

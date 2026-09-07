@@ -20,6 +20,21 @@ Pregunta 1/5: …
 8. **Never re-ask** confirmed facts.
 9. If the user pastes a rich brief (fast-path): extract answers, confirm the extraction in one short summary, mark those questions/items skipped with rationale in session state, and continue only with remaining unknowns—still one at a time.
 10. Boot menu (options 1/2/3) is a **choice**, not an interview set—exempt from k/N, but still one prompt.
+11. **Session-language UI labels.** Progress and set names shown to the human MUST match session language (`Language` in session state). Internal field ids (`work_type`, `systems`, `user_facing`) stay in English in files/templates—**never** paste those ids into user-facing progress when the session is Spanish (or another language).
+
+| Internal id | Display (es) | Display (en) |
+|-------------|--------------|--------------|
+| `work_type` | tipo de trabajo | work type |
+| `systems` | acceso a sistemas | system access |
+| `user_facing` | ¿habla con usuarios finales? | end-user facing? |
+
+Example (es):
+
+```text
+Fase 01 · Acceso a sistemas · ítem 1/12 — Toma de requerimientos:
+```
+
+Not: `conjunto systems`.
 
 ## Inline concept gloss (mandatory)
 
