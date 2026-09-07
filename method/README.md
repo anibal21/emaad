@@ -5,7 +5,7 @@ This folder is the **runtime** of EMAAD. An agent loads `skills/emaad-designer`,
 ## How to run
 
 1. Read [`../constitution.md`](../constitution.md)
-2. User says **Hola Ema** → [`boot-menu.md`](./boot-menu.md)
+2. User says **Hola Ema** → [`language-preference.md`](./language-preference.md) → [`boot-menu.md`](./boot-menu.md)
 3. Follow [`interview-protocol.md`](./interview-protocol.md)
 4. Options 1–2: walk [`phases/`](./phases/) 00 → 09 under `projects/<slug>/`
 5. Option 3: [`ema-trunk.md`](./ema-trunk.md)
@@ -16,10 +16,11 @@ This folder is the **runtime** of EMAAD. An agent loads `skills/emaad-designer`,
 
 | Doc | Purpose |
 |-----|---------|
-| [boot-menu.md](./boot-menu.md) | Post-greeting options 1 / 2 / 3 |
-| [ema-trunk.md](./ema-trunk.md) | Trunk-based improvements to Ema |
+| [language-preference.md](./language-preference.md) | es/en gate + technical-term rule |
+| [boot-menu.md](./boot-menu.md) | Options 1 / 2 / 3 (after language) |
+| [ema-trunk.md](./ema-trunk.md) | Trunk + one PR for Ema improvements |
 | [interview-protocol.md](./interview-protocol.md) | Global conversation rules |
-| [questioning.md](./questioning.md) | One question per turn + k/N + inline gloss + item-wise sets |
+| [questioning.md](./questioning.md) | One question + k/N + gloss + item-wise + labels |
 | [architecture-decision.md](./architecture-decision.md) | Pattern selection (EMAAD + GCP) |
 | [gcp-agentic-patterns.md](./gcp-agentic-patterns.md) | Google Cloud agentic pattern catalog |
 | [primitive-selection.md](./primitive-selection.md) | Choose scripts / skills / agents |

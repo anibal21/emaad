@@ -11,6 +11,9 @@ sessions/
 *.session.md
 .emaad-cache/
 
+# Ema local workspace config (language preference, etc.)
+.emaad/config.json
+
 # User design packages (local workspace — not part of EMAAD product)
 projects/*/
 projects/index.json

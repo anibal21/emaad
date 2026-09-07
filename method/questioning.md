@@ -2,74 +2,59 @@
 
 Binding for all Ema interviews (project modes and Option 3 clarification when asking sequential facts).
 
+Language for user-facing chrome comes from `.emaad/config.json` via [`language-preference.md`](./language-preference.md).
+
 ## Rules
 
 1. **Exactly one question per assistant turn.** Never stack 2+ independent questions in the same message.
-2. **Announce the set up front** when starting a phase or a defined question sequence:
-
-```text
-Fase 00 — Intake: 5 preguntas.
-Pregunta 1/5: …
-```
-
-3. **Show progress on every question**: `Pregunta k/N` (or `Question k/N` in English).
+2. **Announce the set up front** when starting a phase or a defined question sequence (in the configured language).
+3. **Show progress on every question**: `Pregunta k/N` (es) or `Question k/N` (en).
 4. After each answer: update session state (if applicable), briefly acknowledge if needed, then ask **k+1/N** (or next item in an item-wise set).
-5. When a phase question set completes: state that it is complete, check exit criteria, advance phase (and announce the next set’s `N` before its first question).
+5. When a phase question set completes: state that it is complete, check exit criteria, advance phase.
 6. Every question MUST map to a session-state field, checklist item, or explicit design decision.
 7. Prefer structured choices (A/B/C) inside the single question.
 8. **Never re-ask** confirmed facts.
-9. If the user pastes a rich brief (fast-path): extract answers, confirm the extraction in one short summary, mark those questions/items skipped with rationale in session state, and continue only with remaining unknowns—still one at a time.
-10. Boot menu (options 1/2/3) is a **choice**, not an interview set—exempt from k/N, but still one prompt.
+9. If the user pastes a rich brief (fast-path): extract answers, confirm once, continue one-at-a-time for remainders.
+10. Boot menu is a **choice** after language is set—exempt from k/N, but still one prompt.
+11. **Session-language UI labels.** Progress and set names shown to the human MUST match configured language. Internal field ids (`work_type`, `systems`, `user_facing`) stay English in files—**never** expose those ids in user-facing progress (no `conjunto systems`).
+
+| Internal id | Display (es) | Display (en) |
+|-------------|--------------|--------------|
+| `work_type` | Tipo de trabajo | Work type |
+| `systems` | Acceso a sistemas | System access |
+| `user_facing` | ¿Habla con usuarios finales? | End-user facing? |
+
+12. **Technical terms stay original.** Proper nouns / protocol names / pattern names remain in their original language (usually English), with a short gloss in the session language in parentheses — e.g. **HITL** (humano en el ciclo), **MCP** (Model Context Protocol). See [`language-preference.md`](./language-preference.md).
 
 ## Inline concept gloss (mandatory)
 
-When a question uses EMAAD / architecture jargon the human may not know, **define it in that same turn** before or beside the ask—do not send them to another doc mid-question.
+When a question uses EMAAD / architecture jargon the human may not know, **define it in that same turn**.
 
-Include a short table or one-liners, for example:
-
-```text
-Pregunta 2/4 — tipo de trabajo para «Toma de requerimientos»:
-
-| Tipo | Significa | Ejemplo |
-|------|-----------|---------|
-| Juicio | … | … |
-| Procedimiento | … | … |
-| Chequeo determinista | … | … |
-
-¿Cuál aplica a esta área?
-```
-
-Applies to: work types, pattern names, HITL classes, risk tiers, GCP pattern labels, primitive types (script/skill/agent), and similar.
+- Everyday method words (juicio / procedimiento) → explain in session language.
+- Technical proper nouns → **OriginalName** (glosa en idioma de sesión).
 
 ## Item-wise sets (mandatory)
 
-When Ema needs the **same field filled for every item** in a list the human already provided (or that Ema collected):
+When Ema needs the **same field filled for every item** in a list:
 
-1. Do **not** ask “clasifica todas las áreas de una vez”.
-2. Announce a **dynamic set**:
+1. Do **not** ask for a full mapping in one reply by default.
+2. Announce a **dynamic set** with a **localized** set title:
 
 ```text
-Conjunto: tipo de trabajo por área — 12 ítems.
-Ítem 1/12 — Toma de requerimientos:
-«gloss if needed»
-¿juicio, procedimiento o chequeo determinista?
+Fase 01 · Acceso a sistemas · ítem 1/12 — Toma de requerimientos:
 ```
 
-3. Persist each answer into session state as you go.
-4. After `M/M`, return to the parent phase progress (next `k/N`) or complete the phase.
-5. Nesting: show both counters when useful, e.g. `Fase 01 · conjunto work_type · ítem 3/12`.
-6. Fast-path: if the human volunteers a full mapping in one message, confirm once and skip remaining items.
-
-**Default `M`** = count of items in the list. If the list changes (add/remove), revise `M` once and continue.
+3. Persist each answer; after `M/M` continue the phase.
+4. Fast-path: if the human volunteers a full mapping, confirm once and skip remaining items.
 
 ## Anti-patterns
 
-- “Responde este bloque:” + several questions  
-- Asking name and domain and mission in one message  
-- Hiding how many questions remain  
-- Using jargon (juicio / ReAct / HITL / SRP) **without** an inline gloss  
-- “Para cada área, dime X” expecting one mega-reply as the default  
+- Multi-question blocks  
+- Spanglish progress (`conjunto systems`)  
+- Translating proper technical names without keeping the original  
+- Skipping language gate when config is unset  
+- “Map all items at once” as the default  
 
 ## Phase authors
 
-Each `phases/*.md` lists an ordered question set. Where a step says “for each …”, authors MUST mark it as an **item-wise set** that expands after the list exists (unknown `M` until then). Ema computes `M` at runtime.
+Mark “for each …” steps as **item-wise sets**. Document **display (es)** / **display (en)** for set titles. Ema computes `M` at runtime.

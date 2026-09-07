@@ -6,45 +6,43 @@ Decompose the problem into capability domains and work types (judgment vs determ
 
 ## Question set
 
-Follow [`../questioning.md`](../questioning.md) — including **inline gloss** and **item-wise sets**.
+Follow [`../questioning.md`](../questioning.md) and [`../language-preference.md`](../language-preference.md).
 
 ### Greenfield
 
-Announce at start: `Fase 01 — Domain map` (structure below; total human turns = 1 list + 3×M item-wise, where M = number of areas).
+Announce (es): `Fase 01 — Mapa de dominios` · (en): `Phase 01 — Domain map`.
 
-| Step | Kind | Ask |
-|------|------|-----|
-| A | Phase question | List the major capability areas (about 5–12 bullets). |
-| B | **Item-wise set** `work_type` | For **each** area (`ítem i/M`): classify as juicio / procedimiento / chequeo determinista — **with inline gloss every time or at least on ítem 1/M and on request**. |
-| C | **Item-wise set** `systems` | For **each** area: does it need live system access (APIs, repos, tickets, browsers)? If yes, which systems? |
-| D | **Item-wise set** `user_facing` | For **each** area: talk directly to end users / customer? (yes/no) |
+| Step | Kind | Internal id | Display (es) | Display (en) | Ask |
+|------|------|-------------|--------------|--------------|-----|
+| A | Phase question | — | Lista de áreas | Capability list | List major capability areas (≈5–12). |
+| B | Item-wise | `work_type` | Tipo de trabajo | Work type | juicio / procedimiento / chequeo determinista (+ gloss). |
+| C | Item-wise | `systems` | Acceso a sistemas | System access | Live systems needed? If yes, which? |
+| D | Item-wise | `user_facing` | ¿Habla con usuarios finales? | End-user facing? | yes/no |
 
-Progress examples:
+Progress example (es):
 
 ```text
-Fase 01 · conjunto work_type · ítem 1/12 — Toma de requerimientos:
-| Tipo | Significa | Ejemplo |
-…
-¿Cuál aplica?
+Fase 01 · Acceso a sistemas · ítem 1/12 — Toma de requerimientos:
+
+¿Esta área necesita conectarse a sistemas en vivo?
+| Opción | Significa |
+| Sí | APIs, repos, tickets, ERP, navegador, etc. |
+| No | Solo conversación / docs locales |
+
+¿Sí o no? (si sí, nombra los sistemas)
 ```
 
 ### Brownfield
 
-Same as greenfield, then:
-
-| Step | Kind | Ask |
-|------|------|-----|
-| E | Phase question | Inventory current agents, skills, workflows, scripts, MCP servers and known pain points. |
+Same as greenfield, then inventory of current agents/skills/MCP + pain points.
 
 ## Produce
 
-- Domain table: `domain | work_type | systems | user_facing | notes`  
-- Brownfield inventory + pain list (if applicable)  
+- Domain table: `domain | work_type | systems | user_facing | notes`
 
 ## Exit criteria
 
 - Domain table complete for all listed areas  
-- Clear candidates for scripts vs skills vs agents  
 
 ## Next
 
