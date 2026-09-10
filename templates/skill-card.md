@@ -3,8 +3,10 @@
 | Field | Value |
 |-------|-------|
 | Name | {{skill_name}} |
+| Purpose (SRP) | {{one_sentence_purpose}} |
 | Description (trigger) | {{description}} |
-| Owner | |
+| Owner agent | |
+| Operator invocable | yes \| no |
 | Risk tier | Low \| Medium \| High |
 | Version policy | pin in prod \| latest in dev |
 | Review status | pending \| passed |
@@ -12,7 +14,11 @@
 
 ## Domain / SRP
 
-> 
+> {{purpose expanded if needed}}
+
+## Must not
+
+- 
 
 ## Progressive disclosure layout
 
@@ -26,9 +32,11 @@
 
 ## Workflows
 
-| Workflow | Trigger phrases | File |
-|----------|-----------------|------|
-| | | |
+| Workflow | Trigger phrases | File | Notes |
+|----------|-----------------|------|-------|
+| | | | |
+
+Skill-body-only (no workflow): reason —
 
 ## MCP / tool dependencies
 
