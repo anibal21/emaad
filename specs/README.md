@@ -19,8 +19,9 @@ Delivery to trunk: **one short-lived branch + one Pull Request → `main`** (see
 | 009 | [009-language-preference](./009-language-preference/) | Converged | Language gate es/en + technical terms + UI labels |
 | 010 | [010-itemwise-skill-cards](./010-itemwise-skill-cards/) | Converged | Phase 05 skill cards item-wise (parity with agent design) |
 | 011 | [011-self-explanatory-questions](./011-self-explanatory-questions/) | Converged | Questions must define concepts; never assume EMAAD fluency |
+| 012 | [012-itemwise-security-asks](./012-itemwise-security-asks/) | Converged | Phase 07 secrets/MCP/skill review item-wise (no general asks) |
 
-Next change → **`012-<short-slug>/`** on a new branch from merged `main`, with **one** PR.
+Next change → **`013-<short-slug>/`** on a new branch from merged `main`, with **one** PR.
 
 ## Rules
 
@@ -43,3 +44,4 @@ Next change → **`012-<short-slug>/`** on a new branch from merged `main`, with
 | 009 | Language preference config; supersedes open progress-label PR #6 |
 | 010 | Item-wise skill cards in phase 05 (agent-parity interview) |
 | 011 | Self-explanatory questions (define concepts before asking) |
+| 012 | Item-wise Phase 07 security asks (per system / MCP / High skill) |
