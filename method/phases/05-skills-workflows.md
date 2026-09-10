@@ -23,17 +23,17 @@ Fase 05 · Comercial · skill 1/9 — intake-evaluation-request
 Phase 05 · Commercial · skill 1/9 — intake-evaluation-request
 ```
 
-One field per turn (propose a default the human can accept or rewrite):
+One field per turn (propose a default the human can accept or rewrite). **Gloss every field name** on first use in the set (self-explanatory questions — [`../questioning.md`](../questioning.md)); e.g. when asking for workflows, define **workflow** (receta paso a paso dentro del skill) with a micro-example before the choice.
 
 | Step | Field | Ask (es gloss) |
 |------|-------|----------------|
-| 1 | `purpose` | Propósito / mandato en una frase (SRP del skill) |
-| 2 | `trigger` | Description / frases que disparan el skill |
-| 3 | `workflows` | ≥1 workflow name + when to use it (or skill-body-only reason) |
+| 1 | `purpose` | Propósito / mandato en una frase (SRP del skill) — qué problema resuelve este paquete |
+| 2 | `trigger` | Description / frases que disparan el skill (cuándo debe activarse) |
+| 3 | `workflows` | ≥1 **workflow** (flujo de pasos concretos) name + when to use it (or skill-body-only reason) |
 | 4 | `owner` | Agente dueño (already known if grouped—confirm if needed) |
-| 5 | `operator_invocable` | ¿El operador puede invocarlo a mano? (**Sí** / **No**) |
+| 5 | `operator_invocable` | ¿El operador puede invocarlo a mano? (**Sí** / **No**) — gloss: elegir el skill tú mismo vs solo uso interno entre agentes |
 | 6 | `must_not` | Qué no debe hacer este skill |
-| 7 | `risk_tier` | Low / Medium / High (only if not obvious from HITL/MCP) |
+| 7 | `risk_tier` | Low / Medium / High (only if not obvious from HITL/MCP) — gloss blast/risk briefly |
 
 Skip a step only when already confirmed and unchanged (never re-ask). Shared skills appearing under multiple agents: define **once**, then reference.
 

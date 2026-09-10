@@ -83,7 +83,7 @@ run checklists
 set Review → await human for Approved
 ```
 
-Follow `method/questioning.md` strictly (never multi-question blocks; never “map all items at once” as default; always gloss jargon in-question). **Phase 05** designs skills **item-wise** like Phase 04 agents (`method/phases/05-skills-workflows.md`)—not with vague whole-catalog prompts.
+Follow `method/questioning.md` strictly (never multi-question blocks; never “map all items at once” as default; always gloss jargon in-question; **self-explanatory questions** — define + micro-example + ask; never assume EMAAD fluency). **Phase 05** designs skills **item-wise** like Phase 04 agents (`method/phases/05-skills-workflows.md`)—not with vague whole-catalog prompts.
 
 ## Hard rules
 

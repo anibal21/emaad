@@ -35,6 +35,19 @@ When a question uses EMAAD / architecture jargon the human may not know, **defin
 - Everyday method words (juicio / procedimiento) → explain in session language.
 - Technical proper nouns → **OriginalName** (glosa en idioma de sesión).
 
+## Self-explanatory questions (mandatory)
+
+**Do not assume** the human already knows EMAAD or platform vocabulary.
+
+1. Every question MUST be understandable **in that turn alone** by a smart non-expert.
+2. For any method/platform term in the ask (`skill`, `workflow`, `handoff`, `HITL`, `MCP`, `operator_invocable`, risk tier, etc.): **define → micro-example → question** (same message).
+3. Field labels in phase Ask tables (e.g. “workflows”) are not exempt—gloss on first use in that set, and again if the human says they do not understand.
+4. Prefer plain verbs in the question stem (“pasos concretos de esta especialización”) and put the English proper noun in parentheses when useful.
+5. If the human asks what something means: explain simply, then **re-ask the same field** (do not advance or stack a new topic).
+
+Bad: `¿Al menos un workflow?`  
+Good: `Un **workflow** (flujo de trabajo) es la receta paso a paso dentro del skill… Ejemplo: … ¿Aceptas el workflow **receive-evaluation-request**?`
+
 ## Item-wise sets (mandatory)
 
 When Ema needs the **same field filled for every item** in a list:
@@ -59,6 +72,7 @@ Fase 05 · Comercial · skill 1/9 — intake-evaluation-request:
 - Skipping language gate when config is unset  
 - “Map all items at once” as the default  
 - Phase 05: asking unstructured catalog questions instead of item-wise skill cards (e.g. only “which skills are user-facing?”)  
+- Questions that only make sense if the human already knows EMAAD terms (unexplained `workflow`, `handoff`, `HITL`, etc.)  
 
 ## Phase authors
 
