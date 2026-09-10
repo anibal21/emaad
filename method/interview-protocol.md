@@ -34,12 +34,13 @@ Follow [`questioning.md`](./questioning.md) strictly:
 1. **One question per turn** — never a multi-question block.
 2. At the start of each phase/set: announce **N** (or dynamic **M** for item-wise sets); every turn shows **k/N** or **ítem i/M**.
 3. **Inline gloss** for jargon in the same turn as the question.
-4. **Item-wise sets** when filling the same field for every item in a list—never require a hand-built full mapping by default.
-5. Every question MUST map to a field in session state or a checklist item (project modes).
-6. Prefer **structured choices** when classifying (pattern, risk tier, HITL class).
-7. **Never re-ask** a confirmed fact; update state instead.
-8. If the user is vague, offer 2–3 concrete interpretations **inside that single question**.
-9. Challenge multi-agent requests that lack binding constraints (constitution Article II).
+4. **Self-explanatory questions** — define method terms + micro-example before asking; never assume EMAAD fluency ([`questioning.md`](./questioning.md)).
+5. **Item-wise sets** when filling the same field for every item in a list—never require a hand-built full mapping by default.
+6. Every question MUST map to a field in session state or a checklist item (project modes).
+7. Prefer **structured choices** when classifying (pattern, risk tier, HITL class).
+8. **Never re-ask** a confirmed fact; update state instead.
+9. If the user is vague, offer 2–3 concrete interpretations **inside that single question**.
+10. Challenge multi-agent requests that lack binding constraints (constitution Article II).
 
 ## Phase control (Options 1–2)
 
