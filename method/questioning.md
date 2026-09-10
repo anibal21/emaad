@@ -23,6 +23,8 @@ Language for user-facing chrome comes from `.emaad/config.json` via [`language-p
 | `work_type` | Tipo de trabajo | Work type |
 | `systems` | Acceso a sistemas | System access |
 | `user_facing` | ¿Habla con usuarios finales? | End-user facing? |
+| `skill_card` | Skills · \<rol\> · skill k/M | Skills · \<role\> · skill k/M |
+| `operator_invocable` | ¿El operador puede invocarlo? | Operator-invocable? |
 
 12. **Technical terms stay original.** Proper nouns / protocol names / pattern names remain in their original language (usually English), with a short gloss in the session language in parentheses — e.g. **HITL** (humano en el ciclo), **MCP** (Model Context Protocol). See [`language-preference.md`](./language-preference.md).
 
@@ -42,10 +44,12 @@ When Ema needs the **same field filled for every item** in a list:
 
 ```text
 Fase 01 · Acceso a sistemas · ítem 1/12 — Toma de requerimientos:
+Fase 05 · Comercial · skill 1/9 — intake-evaluation-request:
 ```
 
 3. Persist each answer; after `M/M` continue the phase.
 4. Fast-path: if the human volunteers a full mapping, confirm once and skip remaining items.
+5. **Phase 05 skills** use the same discipline as **Phase 04 agents**: one skill card at a time, one field per turn ([`phases/05-skills-workflows.md`](./phases/05-skills-workflows.md)). Do not replace that loop with a single vague catalog question.
 
 ## Anti-patterns
 
@@ -54,6 +58,7 @@ Fase 01 · Acceso a sistemas · ítem 1/12 — Toma de requerimientos:
 - Translating proper technical names without keeping the original  
 - Skipping language gate when config is unset  
 - “Map all items at once” as the default  
+- Phase 05: asking unstructured catalog questions instead of item-wise skill cards (e.g. only “which skills are user-facing?”)  
 
 ## Phase authors
 
